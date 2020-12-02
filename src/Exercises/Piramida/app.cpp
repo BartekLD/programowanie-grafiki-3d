@@ -30,11 +30,22 @@ void SimpleShapeApplication::init() {
 
 
     std::vector<GLfloat> vertices = {
-            -0.5f, -0.5f, 0.0, 0.0, 0.0, 1.0,
-            0.5f, -0.5f, 0.0, 0.0, 0.0, 1.0,
-            -0.5f, 0.5f, 0.0, 0.0, 1.0, 0.0,
-            0.5f, 0.5f, 0.0, 0.0, 1.0, 0.0,
-            0.0, 1.0f, 0.0, 0.0, 1.0, 0.0,
+            -1.0f, -1.0f, 0.0, 1.0, 1.0, 1.0,
+            1.0f, -1.0f, 0.0, 1.0, 1.0, 1.0,
+            -1.0f, 1.0f, 0.0, 1.0, 1.0, 1.0,
+            1.0f, 1.0f, 0.0, 1.0, 1.0, 1.0, //bottom
+            0.0f, 0.0f, 1.0f, 0.5, 0.5, 0.0,
+            -1.0f, -1.0f, 0.0, 0.5, 0.5, 0.0,
+            1.0f, -1.0f, 0.0f, 0.5, 0.5, 0.0, //first wall
+            0.0f, 0.0f, 1.0f, 1.0, 0.0, 0.0,
+            -1.0f, -1.0f, 0.0, 1.0, 0.0, 0.0,
+            -1.0f, 1.0f, 0.0, 1.0, 0.0, 0.0, //second wall
+            0.0f, 0.0f, 1.0f, 1.0, 1.0, 0.0,
+            1.0f, 1.0f, 0.0, 1.0, 1.0, 0.0,
+            -1.0f, 1.0f, 0.0, 1.0, 1.0, 0.0, //third wall
+            0.0f, 0.0f, 1.0f, 1.0, 0.0, 1.0,
+            1.0f, 1.0f, 0.0, 1.0, 0.0, 1.0,
+            1.0f, -1.0f, 0.0, 1.0, 0.0, 1.0, //fourth wall
            };
 
 
@@ -45,8 +56,8 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
     std::vector<GLushort> indices = {
-            0,1,2,1,3,2,2,4,3 };
-    GLuint idx_buffer_handle;
+            0,1,2,2,3,1,5,6,4,7,8,9,10,11,12,13,14,15 };
+                GLuint idx_buffer_handle;
     glGenBuffers(1,&idx_buffer_handle);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idx_buffer_handle);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), indices.data(),
@@ -93,9 +104,9 @@ void SimpleShapeApplication::init() {
     int w, h;
     std::tie(w, h) = frame_buffer_size();
 
-    auto V =glm::lookAt(glm::vec3{0.5, 0.5, 2.4},
+    auto V =glm::lookAt(glm::vec3{2.0, 2.0, 2.0},
                         glm::vec3{0.0f, 0.0f, 0.0f},
-                        glm::vec3{0.0f,1.5,1.0});
+                        glm::vec3{1.0f,1.0,2.0});
     auto P = glm::perspective(glm::half_pi<float>(),(float)w/h,0.1f,100.0f);
     auto M = glm::mat4(1.0f);
     glBufferData(GL_UNIFORM_BUFFER,3*sizeof(glm::mat4), nullptr
@@ -116,6 +127,6 @@ void SimpleShapeApplication::init() {
 
 void SimpleShapeApplication::frame() {
     glBindVertexArray(vao_);
-    glDrawElements(GL_TRIANGLES, 9,  GL_UNSIGNED_SHORT,reinterpret_cast<GLvoid *>(0));
+    glDrawElements(GL_TRIANGLES, 18,  GL_UNSIGNED_SHORT,reinterpret_cast<GLvoid *>(0));
     glBindVertexArray(0);
 }
