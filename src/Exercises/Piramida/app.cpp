@@ -114,7 +114,7 @@ void SimpleShapeApplication::init() {
     glBufferSubData(GL_UNIFORM_BUFFER,0,sizeof(glm::mat4),&P[0]);
     glBufferSubData(GL_UNIFORM_BUFFER,sizeof(glm::mat4),sizeof(glm::mat4),&V[0]);
     glBufferSubData(GL_UNIFORM_BUFFER,2*sizeof(glm::mat4),sizeof(glm::mat4),&M[0]);
-    /////
+
     glBindBuffer(GL_UNIFORM_BUFFER,0);
     glBindBufferBase(GL_UNIFORM_BUFFER,0,ubo_handle);
     glBindBufferBase(GL_UNIFORM_BUFFER,1,ubo_handle_PVM);

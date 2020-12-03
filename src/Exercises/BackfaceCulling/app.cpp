@@ -43,9 +43,9 @@ void SimpleShapeApplication::init() {
             0.0f, 0.0f, 1.0f, 1.0, 1.0, 0.0,
             1.0f, 1.0f, 0.0, 1.0, 1.0, 0.0,
             -1.0f, 1.0f, 0.0, 1.0, 1.0, 0.0, //third wall
-            0.0f, 0.0f, 1.0f, 0.81, 0.0, 0.0,
-            1.0f, 1.0f, 0.0, 0.81, 0.0, 0.0,
-            1.0f, -1.0f, 0.0, 0.81, 0.0, 0.0, //fourth wall
+            0.0f, 0.0f, 1.0f, 0.81, 0.0, 0.5,
+            1.0f, 1.0f, 0.0, 0.81, 0.0, 0.5,
+            1.0f, -1.0f, 0.0, 0.81, 0.0, 0.5, //fourth wall
            };
 
     glEnable(GL_DEPTH_TEST);
@@ -117,7 +117,7 @@ void SimpleShapeApplication::init() {
     glBufferSubData(GL_UNIFORM_BUFFER,0,sizeof(glm::mat4),&P[0]);
     glBufferSubData(GL_UNIFORM_BUFFER,sizeof(glm::mat4),sizeof(glm::mat4),&V[0]);
     glBufferSubData(GL_UNIFORM_BUFFER,2*sizeof(glm::mat4),sizeof(glm::mat4),&M[0]);
-    /////
+
     glBindBuffer(GL_UNIFORM_BUFFER,0);
     glBindBufferBase(GL_UNIFORM_BUFFER,0,ubo_handle);
     glBindBufferBase(GL_UNIFORM_BUFFER,1,ubo_handle_PVM);
