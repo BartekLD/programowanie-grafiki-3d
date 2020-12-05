@@ -59,7 +59,7 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
     std::vector<GLushort> indices = {
-            0,1,2,3,2,1,4,5,6,9,8,7,10,11,12,13,15,14 };
+            0,2,1,3,1,2,4,5,6,9,8,7,10,11,12,13,15,14 };
                 GLuint idx_buffer_handle;
     glGenBuffers(1,&idx_buffer_handle);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idx_buffer_handle);
