@@ -32,4 +32,5 @@ private:
 
     glm::mat4 P_;
     glm::mat4 V_;
+    glm::mat4 M_;
     };

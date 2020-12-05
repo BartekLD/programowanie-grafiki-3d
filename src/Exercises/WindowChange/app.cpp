@@ -82,7 +82,7 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
     glBindBufferBase(GL_UNIFORM_BUFFER, 0, ubo_handle);
 
-    GLuint u_pvm_buffer_(0u);
+    //GLuint ubo_handle_PVM(0u);
     glGenBuffers(1, &u_pvm_buffer_);
     auto u_transformations_index = glGetUniformBlockIndex(program,"Transformations");
     if(u_transformations_index == GL_INVALID_INDEX)
@@ -102,21 +102,23 @@ void SimpleShapeApplication::init() {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
-
     glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+
     int w, h;
     std::tie(w, h) = frame_buffer_size();
-
-    auto V =glm::lookAt(glm::vec3{1.5, 1.0, 4.0},
+    aspect_ = (float)w/h;
+    fov_ = glm::half_pi<float>();
+    near_= 0.1f;
+    far_ = 100.0f;
+    P_=glm::perspective(fov_,aspect_,near_,far_);
+    V_ =glm::lookAt(glm::vec3{1.5, 1.0, 4.0},
                         glm::vec3{0.0f, 0.0f, 0.0f},
                         glm::vec3{0.0f,0.0,1.0});
-    auto P = glm::perspective(glm::half_pi<float>(),(float)w/h,0.1f,100.0f);
-    auto M = glm::mat4(1.0f);
-    glBufferData(GL_UNIFORM_BUFFER,3*sizeof(glm::mat4), nullptr
-            ,GL_STATIC_DRAW);
-    glBufferSubData(GL_UNIFORM_BUFFER,0,sizeof(glm::mat4),&P[0]);
-    glBufferSubData(GL_UNIFORM_BUFFER,sizeof(glm::mat4),sizeof(glm::mat4),&V[0]);
-    glBufferSubData(GL_UNIFORM_BUFFER,2*sizeof(glm::mat4),sizeof(glm::mat4),&M[0]);
+    M_ = glm::mat4(1.0f);
+    glBufferData(GL_UNIFORM_BUFFER,3*sizeof(glm::mat4), nullptr, GL_STATIC_DRAW);
+    glBufferSubData(GL_UNIFORM_BUFFER,0,sizeof(glm::mat4),&P_[0]);
+    glBufferSubData(GL_UNIFORM_BUFFER,sizeof(glm::mat4),sizeof(glm::mat4),&V_[0]);
+    glBufferSubData(GL_UNIFORM_BUFFER,2*sizeof(glm::mat4),sizeof(glm::mat4),&M_[0]);
 
     glBindBuffer(GL_UNIFORM_BUFFER,0);
     glBindBufferBase(GL_UNIFORM_BUFFER,0,ubo_handle);
