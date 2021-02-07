@@ -2,8 +2,8 @@
 // Created by Bartek on 07.02.2021.
 //
 
-#ifndef MAIN_CPP_PYRAMID_H
-#define MAIN_CPP_PYRAMID_H
+#ifndef INC_3DGRAPHICSEXAMPLES_PYRAMID_H
+#define INC_3DGRAPHICSEXAMPLES_PYRAMID_H
 #pragma once
 
 #include "glad/glad.h"
@@ -24,4 +24,4 @@ private:
     GLuint buffers_[2];
 
 };
-#endif //MAIN_CPP_PYRAMID_H
+#endif //INC_3DGRAPHICSEXAMPLES_PYRAMID_H

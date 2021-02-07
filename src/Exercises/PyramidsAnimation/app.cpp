@@ -93,7 +93,7 @@ void SimpleShapeApplication::frame() {
     auto now = std::chrono::steady_clock::now();
     auto elapsed_time = std::chrono::duration_cast<std::chrono::duration<float>>(now - start_).count();
     auto rotation_angle = 2.0f * glm::pi<float>()*elapsed_time/rotation_period;
-    auto R = glm::rotate(glm::mat4(1.0f),rotation_angle,glm::vec3(0.0f,1.0f,0.0f));
+    auto R = glm::rotate(glm::mat4(1.0f),rotation_angle,glm::vec3(0.0f,0.0f,1.0f));
 
     auto orbital_rotation_period =20.0f;
     auto orbital_rotation_angle = 2.0f*glm::pi<float>()*elapsed_time/orbital_rotation_period;
@@ -108,7 +108,7 @@ void SimpleShapeApplication::frame() {
     float moon_x = 3.0f*sin(moon_rotation_angle);
     float moon_z = 3.0f*cos(moon_rotation_angle);
     auto moon_0 = glm::translate(glm::mat4(1.0f),glm::vec3{moon_x,0.0f,moon_z});
-    auto moon_R = glm::rotate(glm::mat4(1.0f),moon_rotation_angle,glm::vec3(0.0f,1.0f,0.0f));
+    auto moon_R = glm::rotate(glm::mat4(1.0f),moon_rotation_angle,glm::vec3(0.0f,0.0f,1.0f));
     auto moon_S = glm::scale(glm::mat4(1.0f),glm::vec3(0.5f,0.5f,0.5f));
 
     auto satellite_rotation_period=2.0f;
@@ -116,7 +116,7 @@ void SimpleShapeApplication::frame() {
     float satellite_x = 1.5f*cos(satellite_rotation_angle);
     float satellite_y = 1.5f*sin(satellite_rotation_angle);
     auto satellite_O = glm::translate(glm::mat4(1.0f),glm::vec3{satellite_x,satellite_y,0.0f});
-    auto satellite_R = glm::rotate(glm::mat4(1.0f),satellite_rotation_angle,glm::vec3(0.0f,1.0f,0.0f));
+    auto satellite_R = glm::rotate(glm::mat4(1.0f),satellite_rotation_angle,glm::vec3(0.0f,0.0f,1.0f));
     auto satellite_S = glm::scale(glm::mat4(1.0f),glm::vec3(0.25f,0.25f,0.25f));
 
     glm::mat4 translations[]={
@@ -133,7 +133,7 @@ void SimpleShapeApplication::frame() {
         glBindBuffer(GL_UNIFORM_BUFFER, 0);
         this->pyramid_->draw();
     }
-    
+
 }
 
 void SimpleShapeApplication::framebuffer_resize_callback(int w, int h) {
