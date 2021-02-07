@@ -18,7 +18,7 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory(${3rdParty}/src/glfw3)
 
 
-add_library(glad OBJECT ${glad_SOURCES})
+add_library(glad OBJECT ${glad_SOURCES} src/Exercises/PyramidsAnimation/Pyramid.h src/Exercises/PyramidsAnimation/Pyramid.cpp)
 
 find_package(OpenGL REQUIRED)
 
@@ -37,3 +37,4 @@ add_subdirectory(src/Exercises/WindowChange)
 add_subdirectory(src/Exercises/Zoom)
 add_subdirectory(src/Exercises/CameraMovement)
 add_subdirectory(src/Exercises/PyramidsAnimation)
+
