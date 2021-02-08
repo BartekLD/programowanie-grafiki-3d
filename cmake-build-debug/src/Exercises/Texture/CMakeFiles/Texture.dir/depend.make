@@ -3,6 +3,7 @@
 
 src/Exercises/Texture/CMakeFiles/Texture.dir/Pyramid.cpp.obj: ../src/3rdParty/include/KHR/khrplatform.h
 src/Exercises/Texture/CMakeFiles/Texture.dir/Pyramid.cpp.obj: ../src/3rdParty/include/glad/glad.h
+src/Exercises/Texture/CMakeFiles/Texture.dir/Pyramid.cpp.obj: ../src/3rdParty/src/stb/stb_image.h
 src/Exercises/Texture/CMakeFiles/Texture.dir/Pyramid.cpp.obj: ../src/Exercises/Texture/Pyramid.cpp
 src/Exercises/Texture/CMakeFiles/Texture.dir/Pyramid.cpp.obj: ../src/Exercises/Texture/Pyramid.h
 

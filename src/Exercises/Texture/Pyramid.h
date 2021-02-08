@@ -22,6 +22,7 @@ public:
 private:
     GLuint vao_;
     GLuint  buffers_[2];
+    GLuint diffuse_texture_;
 
 };
 #endif //INC_3DGRAPHICSEXAMPLES_PYRAMID_H

@@ -4,6 +4,7 @@
 src/Exercises/Texture/CMakeFiles/Texture.dir/Pyramid.cpp.obj
  ../src/3rdParty/include/KHR/khrplatform.h
  ../src/3rdParty/include/glad/glad.h
+ ../src/3rdParty/src/stb/stb_image.h
  C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Texture/Pyramid.cpp
  C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Texture/Pyramid.h
 src/Exercises/Texture/CMakeFiles/Texture.dir/app.cpp.obj
