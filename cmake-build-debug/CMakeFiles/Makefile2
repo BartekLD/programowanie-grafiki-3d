@@ -86,6 +86,7 @@ all: src/Exercises/WindowChange/all
 all: src/Exercises/Zoom/all
 all: src/Exercises/CameraMovement/all
 all: src/Exercises/PyramidsAnimation/all
+all: src/Exercises/Texture/all
 
 .PHONY : all
 
@@ -103,6 +104,7 @@ preinstall: src/Exercises/WindowChange/preinstall
 preinstall: src/Exercises/Zoom/preinstall
 preinstall: src/Exercises/CameraMovement/preinstall
 preinstall: src/Exercises/PyramidsAnimation/preinstall
+preinstall: src/Exercises/Texture/preinstall
 
 .PHONY : preinstall
 
@@ -121,6 +123,7 @@ clean: src/Exercises/WindowChange/clean
 clean: src/Exercises/Zoom/clean
 clean: src/Exercises/CameraMovement/clean
 clean: src/Exercises/PyramidsAnimation/clean
+clean: src/Exercises/Texture/clean
 
 .PHONY : clean
 
@@ -306,6 +309,24 @@ src/Exercises/PyramidsAnimation/clean: src/Exercises/PyramidsAnimation/CMakeFile
 .PHONY : src/Exercises/PyramidsAnimation/clean
 
 #=============================================================================
+# Directory level rules for directory src/Exercises/Texture
+
+# Recursive "all" directory target.
+src/Exercises/Texture/all: src/Exercises/Texture/CMakeFiles/Texture.dir/all
+
+.PHONY : src/Exercises/Texture/all
+
+# Recursive "preinstall" directory target.
+src/Exercises/Texture/preinstall:
+
+.PHONY : src/Exercises/Texture/preinstall
+
+# Recursive "clean" directory target.
+src/Exercises/Texture/clean: src/Exercises/Texture/CMakeFiles/Texture.dir/clean
+
+.PHONY : src/Exercises/Texture/clean
+
+#=============================================================================
 # Directory level rules for directory src/Exercises/Triangle
 
 # Recursive "all" directory target.
@@ -384,7 +405,7 @@ src/Exercises/Zoom/clean: src/Exercises/Zoom/CMakeFiles/Zoom.dir/clean
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=38 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=42 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -438,7 +459,7 @@ src/3rdParty/src/glfw3/CMakeFiles/uninstall.dir/clean:
 src/3rdParty/src/glfw3/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\3rdParty\src\glfw3\src\CMakeFiles\glfw.dir\build.make src/3rdParty/src/glfw3/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\3rdParty\src\glfw3\src\CMakeFiles\glfw.dir\build.make src/3rdParty/src/glfw3/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58 "Built target glfw"
 .PHONY : src/3rdParty/src/glfw3/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
@@ -465,7 +486,7 @@ src/3rdParty/src/glfw3/src/CMakeFiles/glfw.dir/clean:
 src/Application/CMakeFiles/application.dir/all: src/3rdParty/src/glfw3/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Application\CMakeFiles\application.dir\build.make src/Application/CMakeFiles/application.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Application\CMakeFiles\application.dir\build.make src/Application/CMakeFiles/application.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=35,36,37 "Built target application"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=39,40,41 "Built target application"
 .PHONY : src/Application/CMakeFiles/application.dir/all
 
 # Build rule for subdir invocation for target.
@@ -494,7 +515,7 @@ src/Exercises/Triangle/CMakeFiles/Triangle.dir/all: src/3rdParty/src/glfw3/src/C
 src/Exercises/Triangle/CMakeFiles/Triangle.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Exercises\Triangle\CMakeFiles\Triangle.dir\build.make src/Exercises/Triangle/CMakeFiles/Triangle.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Exercises\Triangle\CMakeFiles\Triangle.dir\build.make src/Exercises/Triangle/CMakeFiles/Triangle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=23,24,25 "Built target Triangle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=27,28,29 "Built target Triangle"
 .PHONY : src/Exercises/Triangle/CMakeFiles/Triangle.dir/all
 
 # Build rule for subdir invocation for target.
@@ -581,7 +602,7 @@ src/Exercises/Uniforms/CMakeFiles/Uniforms.dir/all: src/3rdParty/src/glfw3/src/C
 src/Exercises/Uniforms/CMakeFiles/Uniforms.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Exercises\Uniforms\CMakeFiles\Uniforms.dir\build.make src/Exercises/Uniforms/CMakeFiles/Uniforms.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Exercises\Uniforms\CMakeFiles\Uniforms.dir\build.make src/Exercises/Uniforms/CMakeFiles/Uniforms.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=26,27,28 "Built target Uniforms"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=30,31,32 "Built target Uniforms"
 .PHONY : src/Exercises/Uniforms/CMakeFiles/Uniforms.dir/all
 
 # Build rule for subdir invocation for target.
@@ -697,7 +718,7 @@ src/Exercises/WindowChange/CMakeFiles/WindowChange.dir/all: src/3rdParty/src/glf
 src/Exercises/WindowChange/CMakeFiles/WindowChange.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Exercises\WindowChange\CMakeFiles\WindowChange.dir\build.make src/Exercises/WindowChange/CMakeFiles/WindowChange.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Exercises\WindowChange\CMakeFiles\WindowChange.dir\build.make src/Exercises/WindowChange/CMakeFiles/WindowChange.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=29,30,31 "Built target WindowChange"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=33,34,35 "Built target WindowChange"
 .PHONY : src/Exercises/WindowChange/CMakeFiles/WindowChange.dir/all
 
 # Build rule for subdir invocation for target.
@@ -726,7 +747,7 @@ src/Exercises/Zoom/CMakeFiles/Zoom.dir/all: src/3rdParty/src/glfw3/src/CMakeFile
 src/Exercises/Zoom/CMakeFiles/Zoom.dir/all: src/Application/CMakeFiles/application.dir/all
 	$(MAKE) $(MAKESILENT) -f src\Exercises\Zoom\CMakeFiles\Zoom.dir\build.make src/Exercises/Zoom/CMakeFiles/Zoom.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\Exercises\Zoom\CMakeFiles\Zoom.dir\build.make src/Exercises/Zoom/CMakeFiles/Zoom.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=32,33,34 "Built target Zoom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=36,37,38 "Built target Zoom"
 .PHONY : src/Exercises/Zoom/CMakeFiles/Zoom.dir/all
 
 # Build rule for subdir invocation for target.
@@ -803,6 +824,35 @@ PyramidsAnimation: src/Exercises/PyramidsAnimation/CMakeFiles/PyramidsAnimation.
 src/Exercises/PyramidsAnimation/CMakeFiles/PyramidsAnimation.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src\Exercises\PyramidsAnimation\CMakeFiles\PyramidsAnimation.dir\build.make src/Exercises/PyramidsAnimation/CMakeFiles/PyramidsAnimation.dir/clean
 .PHONY : src/Exercises/PyramidsAnimation/CMakeFiles/PyramidsAnimation.dir/clean
+
+#=============================================================================
+# Target rules for target src/Exercises/Texture/CMakeFiles/Texture.dir
+
+# All Build rule for target.
+src/Exercises/Texture/CMakeFiles/Texture.dir/all: CMakeFiles/glad.dir/all
+src/Exercises/Texture/CMakeFiles/Texture.dir/all: src/3rdParty/src/glfw3/src/CMakeFiles/glfw.dir/all
+src/Exercises/Texture/CMakeFiles/Texture.dir/all: src/Application/CMakeFiles/application.dir/all
+	$(MAKE) $(MAKESILENT) -f src\Exercises\Texture\CMakeFiles\Texture.dir\build.make src/Exercises/Texture/CMakeFiles/Texture.dir/depend
+	$(MAKE) $(MAKESILENT) -f src\Exercises\Texture\CMakeFiles\Texture.dir\build.make src/Exercises/Texture/CMakeFiles/Texture.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=23,24,25,26 "Built target Texture"
+.PHONY : src/Exercises/Texture/CMakeFiles/Texture.dir/all
+
+# Build rule for subdir invocation for target.
+src/Exercises/Texture/CMakeFiles/Texture.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles 24
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Exercises/Texture/CMakeFiles/Texture.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles 0
+.PHONY : src/Exercises/Texture/CMakeFiles/Texture.dir/rule
+
+# Convenience name for target.
+Texture: src/Exercises/Texture/CMakeFiles/Texture.dir/rule
+
+.PHONY : Texture
+
+# clean rule for target.
+src/Exercises/Texture/CMakeFiles/Texture.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src\Exercises\Texture\CMakeFiles\Texture.dir\build.make src/Exercises/Texture/CMakeFiles/Texture.dir/clean
+.PHONY : src/Exercises/Texture/CMakeFiles/Texture.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

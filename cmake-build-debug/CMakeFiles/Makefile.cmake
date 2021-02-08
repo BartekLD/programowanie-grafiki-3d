@@ -65,6 +65,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../src/Exercises/PVM/CMakeLists.txt"
   "../src/Exercises/Piramida/CMakeLists.txt"
   "../src/Exercises/PyramidsAnimation/CMakeLists.txt"
+  "../src/Exercises/Texture/CMakeLists.txt"
   "../src/Exercises/Triangle/CMakeLists.txt"
   "../src/Exercises/Uniforms/CMakeLists.txt"
   "../src/Exercises/WindowChange/CMakeLists.txt"
@@ -94,6 +95,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/Exercises/Zoom/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Exercises/CameraMovement/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Exercises/PyramidsAnimation/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Exercises/Texture/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -113,4 +115,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/Exercises/Zoom/CMakeFiles/Zoom.dir/DependInfo.cmake"
   "src/Exercises/CameraMovement/CMakeFiles/CameraMovement.dir/DependInfo.cmake"
   "src/Exercises/PyramidsAnimation/CMakeFiles/PyramidsAnimation.dir/DependInfo.cmake"
+  "src/Exercises/Texture/CMakeFiles/Texture.dir/DependInfo.cmake"
   )

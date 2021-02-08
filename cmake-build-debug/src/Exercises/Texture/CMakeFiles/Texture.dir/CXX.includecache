@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/3rdParty/include/KHR/khrplatform.h
+stdint.h
+-
+inttypes.h
+-
+stdint.h
+-
+
+../src/3rdParty/include/glad/glad.h
+KHR/khrplatform.h
+-
+
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Texture/Pyramid.cpp
+pyramid.h
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Texture/Pyramid.h
+vector
+-
+
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Texture/Pyramid.h
+glad/glad.h
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Texture/glad/glad.h
+

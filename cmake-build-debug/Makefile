@@ -370,6 +370,19 @@ PyramidsAnimation/fast:
 	$(MAKE) $(MAKESILENT) -f src\Exercises\PyramidsAnimation\CMakeFiles\PyramidsAnimation.dir\build.make src/Exercises/PyramidsAnimation/CMakeFiles/PyramidsAnimation.dir/build
 .PHONY : PyramidsAnimation/fast
 
+#=============================================================================
+# Target rules for targets named Texture
+
+# Build rule for target.
+Texture: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Texture
+.PHONY : Texture
+
+# fast build rule for target.
+Texture/fast:
+	$(MAKE) $(MAKESILENT) -f src\Exercises\Texture\CMakeFiles\Texture.dir\build.make src/Exercises/Texture/CMakeFiles/Texture.dir/build
+.PHONY : Texture/fast
+
 src/3rdParty/src/glad/glad.obj: src/3rdParty/src/glad/glad.c.obj
 
 .PHONY : src/3rdParty/src/glad/glad.obj
@@ -417,6 +430,7 @@ help:
 	@echo ... PVM
 	@echo ... Piramida
 	@echo ... PyramidsAnimation
+	@echo ... Texture
 	@echo ... Triangle
 	@echo ... Uniforms
 	@echo ... WindowChange
