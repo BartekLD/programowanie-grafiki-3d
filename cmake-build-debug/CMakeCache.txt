@@ -364,6 +364,12 @@ Indices_BINARY_DIR:STATIC=C:/Users/domow/Documents/GitHub/programowanie-grafiki-
 //Value Computed by CMake
 Indices_SOURCE_DIR:STATIC=C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Indices
 
+//Value Computed by CMake
+Light_BINARY_DIR:STATIC=C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light
+
+//Value Computed by CMake
+Light_SOURCE_DIR:STATIC=C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light
+
 //OpenGL library for win32
 OPENGL_gl_LIBRARY:STRING=opengl32
 
@@ -375,6 +381,12 @@ PVM_BINARY_DIR:STATIC=C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/c
 
 //Value Computed by CMake
 PVM_SOURCE_DIR:STATIC=C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/PVM
+
+//Value Computed by CMake
+PhongLight_BINARY_DIR:STATIC=C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PhongLight
+
+//Value Computed by CMake
+PhongLight_SOURCE_DIR:STATIC=C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/PhongLight
 
 //Value Computed by CMake
 Piramida_BINARY_DIR:STATIC=C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Piramida
@@ -573,7 +585,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
