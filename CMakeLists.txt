@@ -39,6 +39,6 @@ add_subdirectory(src/Exercises/CameraMovement)
 add_subdirectory(src/Exercises/PyramidsAnimation)
 add_subdirectory(src/Exercises/Texture)
 add_subdirectory(src/Exercises/PhongLight)
-add_subdirectory(src/Exercises/Light)
+
 
 

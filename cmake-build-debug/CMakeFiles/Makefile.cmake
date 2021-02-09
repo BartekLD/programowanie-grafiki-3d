@@ -62,7 +62,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../src/Exercises/CameraMovement/CMakeLists.txt"
   "../src/Exercises/Colors/CMakeLists.txt"
   "../src/Exercises/Indices/CMakeLists.txt"
-  "../src/Exercises/Light/CMakeLists.txt"
   "../src/Exercises/PVM/CMakeLists.txt"
   "../src/Exercises/PhongLight/CMakeLists.txt"
   "../src/Exercises/Piramida/CMakeLists.txt"
@@ -99,7 +98,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/Exercises/PyramidsAnimation/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Exercises/Texture/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Exercises/PhongLight/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/Exercises/Light/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -121,5 +119,4 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/Exercises/PyramidsAnimation/CMakeFiles/PyramidsAnimation.dir/DependInfo.cmake"
   "src/Exercises/Texture/CMakeFiles/Texture.dir/DependInfo.cmake"
   "src/Exercises/PhongLight/CMakeFiles/PhongLight.dir/DependInfo.cmake"
-  "src/Exercises/Light/CMakeFiles/Light.dir/DependInfo.cmake"
   )

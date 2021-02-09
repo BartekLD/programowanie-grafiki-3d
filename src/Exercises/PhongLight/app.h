@@ -18,6 +18,12 @@
 #include "quad_2.h"
 #include <memory>
 
+struct Light {
+    glm::vec4 position;
+    glm::vec4 color;
+    glm::vec4 a;
+    glm::vec4 ambient;
+};
 
 class SimpleShapeApplication : public xe::Application {
 public:
@@ -41,9 +47,12 @@ void scroll_callback(double xoffset, double yoffset) override;
 void mouse_button_callback(int button, int action, int mods) override;
 void cursor_position_callback(double x, double y) override;
 Quad_2 * quad_;
+void cleanup() override;
 private:
 GLuint vao_;
 Camera *camera_;
 GLuint u_pvm_buffer_;
+GLuint u_light_buffer_;
 CameraControler *controler_;
+Light light_;
 };

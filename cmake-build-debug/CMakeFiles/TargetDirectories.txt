@@ -117,10 +117,3 @@ C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/E
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PhongLight/CMakeFiles/rebuild_cache.dir
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PhongLight/CMakeFiles/list_install_components.dir
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PhongLight/CMakeFiles/install/strip.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light/CMakeFiles/Light.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light/CMakeFiles/install/local.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light/CMakeFiles/install.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light/CMakeFiles/edit_cache.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light/CMakeFiles/rebuild_cache.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light/CMakeFiles/list_install_components.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light/CMakeFiles/install/strip.dir

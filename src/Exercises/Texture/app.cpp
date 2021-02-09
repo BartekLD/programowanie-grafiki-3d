@@ -84,7 +84,7 @@ void SimpleShapeApplication::frame() {
 
     glBindBuffer(GL_UNIFORM_BUFFER,u_pvm_buffer_);
     glBufferSubData(GL_UNIFORM_BUFFER,0,sizeof(glm::mat4),&camera()->projection()[0]);
-    glBufferSubData(GL_UNIFORM_BUFFER,sizeof(glm::mat4),sizeof(glm::mat4),&camera()->view()[0]);;
+    glBufferSubData(GL_UNIFORM_BUFFER,sizeof(glm::mat4),sizeof(glm::mat4),&camera()->view()[0]);
     glBindBuffer(GL_UNIFORM_BUFFER,0);
     this->pyramid_->draw();
 }

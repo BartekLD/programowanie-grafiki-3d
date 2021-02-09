@@ -396,19 +396,6 @@ PhongLight/fast:
 	$(MAKE) $(MAKESILENT) -f src\Exercises\PhongLight\CMakeFiles\PhongLight.dir\build.make src/Exercises/PhongLight/CMakeFiles/PhongLight.dir/build
 .PHONY : PhongLight/fast
 
-#=============================================================================
-# Target rules for targets named Light
-
-# Build rule for target.
-Light: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Light
-.PHONY : Light
-
-# fast build rule for target.
-Light/fast:
-	$(MAKE) $(MAKESILENT) -f src\Exercises\Light\CMakeFiles\Light.dir\build.make src/Exercises/Light/CMakeFiles/Light.dir/build
-.PHONY : Light/fast
-
 src/3rdParty/src/glad/glad.obj: src/3rdParty/src/glad/glad.c.obj
 
 .PHONY : src/3rdParty/src/glad/glad.obj
@@ -453,7 +440,6 @@ help:
 	@echo ... CameraMovement
 	@echo ... Colors
 	@echo ... Indices
-	@echo ... Light
 	@echo ... PVM
 	@echo ... PhongLight
 	@echo ... Piramida
