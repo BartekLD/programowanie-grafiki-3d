@@ -94,11 +94,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PyramidsAnimation/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Texture/cmake_install.cmake")
 endif()
 

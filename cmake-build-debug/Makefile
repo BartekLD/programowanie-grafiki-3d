@@ -358,19 +358,6 @@ CameraMovement/fast:
 .PHONY : CameraMovement/fast
 
 #=============================================================================
-# Target rules for targets named PyramidsAnimation
-
-# Build rule for target.
-PyramidsAnimation: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 PyramidsAnimation
-.PHONY : PyramidsAnimation
-
-# fast build rule for target.
-PyramidsAnimation/fast:
-	$(MAKE) $(MAKESILENT) -f src\Exercises\PyramidsAnimation\CMakeFiles\PyramidsAnimation.dir\build.make src/Exercises/PyramidsAnimation/CMakeFiles/PyramidsAnimation.dir/build
-.PHONY : PyramidsAnimation/fast
-
-#=============================================================================
 # Target rules for targets named Texture
 
 # Build rule for target.
@@ -457,7 +444,6 @@ help:
 	@echo ... PVM
 	@echo ... PhongLight
 	@echo ... Piramida
-	@echo ... PyramidsAnimation
 	@echo ... Texture
 	@echo ... Triangle
 	@echo ... Uniforms

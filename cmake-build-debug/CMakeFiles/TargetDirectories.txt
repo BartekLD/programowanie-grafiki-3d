@@ -96,13 +96,6 @@ C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/E
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/CameraMovement/CMakeFiles/rebuild_cache.dir
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/CameraMovement/CMakeFiles/list_install_components.dir
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/CameraMovement/CMakeFiles/install/strip.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PyramidsAnimation/CMakeFiles/PyramidsAnimation.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PyramidsAnimation/CMakeFiles/install/local.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PyramidsAnimation/CMakeFiles/install.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PyramidsAnimation/CMakeFiles/edit_cache.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PyramidsAnimation/CMakeFiles/rebuild_cache.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PyramidsAnimation/CMakeFiles/list_install_components.dir
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PyramidsAnimation/CMakeFiles/install/strip.dir
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Texture/CMakeFiles/Texture.dir
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Texture/CMakeFiles/install/local.dir
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Texture/CMakeFiles/install.dir
