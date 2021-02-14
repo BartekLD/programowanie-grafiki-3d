@@ -37,9 +37,10 @@ add_subdirectory(src/Exercises/WindowChange)
 add_subdirectory(src/Exercises/Zoom)
 add_subdirectory(src/Exercises/CameraMovement)
 #[[add_subdirectory(src/Exercises/PyramidsAnimation)]]
-add_subdirectory(src/Exercises/Texture)
+#[[add_subdirectory(src/Exercises/Texture)]]
 add_subdirectory(src/Exercises/PhongLight)
 add_subdirectory(src/Exercises/Animation)
+add_subdirectory(src/Exercises/Textura)
 
 
 

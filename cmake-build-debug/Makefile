@@ -396,6 +396,19 @@ Animation/fast:
 	$(MAKE) $(MAKESILENT) -f src\Exercises\Animation\CMakeFiles\Animation.dir\build.make src/Exercises/Animation/CMakeFiles/Animation.dir/build
 .PHONY : Animation/fast
 
+#=============================================================================
+# Target rules for targets named Textura
+
+# Build rule for target.
+Textura: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Textura
+.PHONY : Textura
+
+# fast build rule for target.
+Textura/fast:
+	$(MAKE) $(MAKESILENT) -f src\Exercises\Textura\CMakeFiles\Textura.dir\build.make src/Exercises/Textura/CMakeFiles/Textura.dir/build
+.PHONY : Textura/fast
+
 src/3rdParty/src/glad/glad.obj: src/3rdParty/src/glad/glad.c.obj
 
 .PHONY : src/3rdParty/src/glad/glad.obj
@@ -444,6 +457,7 @@ help:
 	@echo ... PVM
 	@echo ... PhongLight
 	@echo ... Piramida
+	@echo ... Textura
 	@echo ... Texture
 	@echo ... Triangle
 	@echo ... Uniforms

@@ -13,7 +13,6 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 
-
 #include "Application/utils.h"
 
 void SimpleShapeApplication::init() {
@@ -31,7 +30,8 @@ void SimpleShapeApplication::init() {
         std::cerr << std::string(PROJECT_DIR) + "/shaders/base_fs.glsl" << " shader files" << std::endl;
     }
 
-   auto u_transformations_index = glGetUniformBlockIndex(program,"Transformations");
+
+    auto u_transformations_index = glGetUniformBlockIndex(program,"Transformations");
     if(u_transformations_index == GL_INVALID_INDEX)
     { std::cout<<"Cannot find Transformations uniform block in program"<<std::endl; }
     else  { glUniformBlockBinding(program,u_transformations_index,1); }
@@ -40,12 +40,22 @@ void SimpleShapeApplication::init() {
 
     std::tie(w, h) = frame_buffer_size();
     camera()->perspective(glm::half_pi<float>(),(float)w/h,0.1f,100.0f);
-    camera()->look_at(glm::vec3{1.5, 1.0, 4.0},
+    camera()->look_at(glm::vec3{-0.1, 0.0, 15.0},
                       glm::vec3{0.0f, 0.0f, 0.0f},
                       glm::vec3{0.0f,0.0,1.0});
 
 
     this->pyramid_ = std::make_shared<Pyramid>();
+
+
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
+    glFrontFace(GL_CCW);
+    glCullFace(GL_BACK);
+
+
+
+    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 
     GLuint ubo_handle(0u);
     glGenBuffers(1,&ubo_handle);
@@ -62,13 +72,11 @@ void SimpleShapeApplication::init() {
     glBindBufferBase(GL_UNIFORM_BUFFER,0,ubo_handle);
     glBindBufferBase(GL_UNIFORM_BUFFER,1,u_pvm_buffer_);
 
-    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+
     glViewport(0, 0, w, h);
 
-    glEnable(GL_CULL_FACE);
-    glFrontFace(GL_CCW);
-    glCullFace(GL_BACK);
     glEnable(GL_DEPTH_TEST);
+
     glUseProgram(program);
     auto  u_diffuse_map_location = glGetUniformLocation(program,"diffuse_map");
     if(u_diffuse_map_location==-1) {
@@ -81,13 +89,15 @@ void SimpleShapeApplication::init() {
 
 void SimpleShapeApplication::frame() {
 
+        auto VM = camera()->view();
+        glBindBuffer(GL_UNIFORM_BUFFER, u_pvm_buffer_);
+        glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), &camera()->projection()[0]);
+        glBufferSubData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), sizeof(glm::mat4), &VM);
+        glBindBuffer(GL_UNIFORM_BUFFER, 0);
+        this->pyramid_->draw();
 
-    glBindBuffer(GL_UNIFORM_BUFFER,u_pvm_buffer_);
-    glBufferSubData(GL_UNIFORM_BUFFER,0,sizeof(glm::mat4),&camera()->projection()[0]);
-    glBufferSubData(GL_UNIFORM_BUFFER,sizeof(glm::mat4),sizeof(glm::mat4),&camera()->view()[0]);
-    glBindBuffer(GL_UNIFORM_BUFFER,0);
-    this->pyramid_->draw();
 }
+
 void SimpleShapeApplication::framebuffer_resize_callback(int w, int h) {
     Application::framebuffer_resize_callback(w, h);
     glViewport(0,0,w,h);

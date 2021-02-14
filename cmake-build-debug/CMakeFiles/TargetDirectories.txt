@@ -117,3 +117,10 @@ C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/E
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Animation/CMakeFiles/edit_cache.dir
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Animation/CMakeFiles/list_install_components.dir
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Animation/CMakeFiles/install/strip.dir
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Textura/CMakeFiles/install/local.dir
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Textura/CMakeFiles/install.dir
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Textura/CMakeFiles/edit_cache.dir
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Textura/CMakeFiles/Textura.dir
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Textura/CMakeFiles/rebuild_cache.dir
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Textura/CMakeFiles/list_install_components.dir
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Textura/CMakeFiles/install/strip.dir
