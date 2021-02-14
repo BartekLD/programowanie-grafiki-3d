@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/Pyramid.cpp" "C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light/CMakeFiles/Light.dir/Pyramid.cpp.obj"
   "C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/app.cpp" "C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light/CMakeFiles/Light.dir/app.cpp.obj"
   "C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/main.cpp" "C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light/CMakeFiles/Light.dir/main.cpp.obj"
+  "C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/quad.cpp" "C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/Light/CMakeFiles/Light.dir/quad.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

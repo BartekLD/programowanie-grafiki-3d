@@ -1132,38 +1132,6 @@ GL/gl.h
 GL/glext.h
 -
 
-../src/3rdParty/src/stb/stb_image.h
-stb_image.h
-../src/3rdParty/src/stb/stb_image.h
-stdio.h
--
-stdlib.h
--
-stdarg.h
--
-stddef.h
--
-stdlib.h
--
-string.h
--
-limits.h
--
-math.h
--
-stdio.h
--
-assert.h
--
-stdint.h
--
-emmintrin.h
--
-intrin.h
--
-arm_neon.h
--
-
 ../src/Application/application.h
 iostream
 -
@@ -1181,22 +1149,6 @@ glad/glad.h
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/CameraControler.h
 camera.h
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/camera.h
-
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/Pyramid.cpp
-pyramid.h
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/Pyramid.h
-vector
--
-3rdParty/src/stb/stb_image.h
--
-string
--
-iostream
--
-
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/Pyramid.h
-glad/glad.h
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/glad/glad.h
 
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/app.cpp
 app.h
@@ -1233,10 +1185,12 @@ camera.h
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/camera.h
 CameraControler.h
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/CameraControler.h
+quad.h
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/quad.h
 memory
 -
-pyramid.h
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/Pyramid.h
+chrono
+-
 
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/camera.h
 cmath
@@ -1248,9 +1202,7 @@ C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/glm
 rotation.h
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/rotation.h
 
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/main.cpp
-app.h
-C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/app.h
+C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/quad.h
 glad/glad.h
 C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Light/glad/glad.h
 

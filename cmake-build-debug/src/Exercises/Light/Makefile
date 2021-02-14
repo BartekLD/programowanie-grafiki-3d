@@ -190,33 +190,6 @@ Light/fast:
 	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\Exercises\Light\CMakeFiles\Light.dir\build.make src/Exercises/Light/CMakeFiles/Light.dir/build
 .PHONY : Light/fast
 
-Pyramid.obj: Pyramid.cpp.obj
-
-.PHONY : Pyramid.obj
-
-# target to build an object file
-Pyramid.cpp.obj:
-	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\Exercises\Light\CMakeFiles\Light.dir\build.make src/Exercises/Light/CMakeFiles/Light.dir/Pyramid.cpp.obj
-.PHONY : Pyramid.cpp.obj
-
-Pyramid.i: Pyramid.cpp.i
-
-.PHONY : Pyramid.i
-
-# target to preprocess a source file
-Pyramid.cpp.i:
-	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\Exercises\Light\CMakeFiles\Light.dir\build.make src/Exercises/Light/CMakeFiles/Light.dir/Pyramid.cpp.i
-.PHONY : Pyramid.cpp.i
-
-Pyramid.s: Pyramid.cpp.s
-
-.PHONY : Pyramid.s
-
-# target to generate assembly for a file
-Pyramid.cpp.s:
-	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\Exercises\Light\CMakeFiles\Light.dir\build.make src/Exercises/Light/CMakeFiles/Light.dir/Pyramid.cpp.s
-.PHONY : Pyramid.cpp.s
-
 app.obj: app.cpp.obj
 
 .PHONY : app.obj
@@ -271,6 +244,33 @@ main.cpp.s:
 	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\Exercises\Light\CMakeFiles\Light.dir\build.make src/Exercises/Light/CMakeFiles/Light.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+quad.obj: quad.cpp.obj
+
+.PHONY : quad.obj
+
+# target to build an object file
+quad.cpp.obj:
+	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\Exercises\Light\CMakeFiles\Light.dir\build.make src/Exercises/Light/CMakeFiles/Light.dir/quad.cpp.obj
+.PHONY : quad.cpp.obj
+
+quad.i: quad.cpp.i
+
+.PHONY : quad.i
+
+# target to preprocess a source file
+quad.cpp.i:
+	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\Exercises\Light\CMakeFiles\Light.dir\build.make src/Exercises/Light/CMakeFiles/Light.dir/quad.cpp.i
+.PHONY : quad.cpp.i
+
+quad.s: quad.cpp.s
+
+.PHONY : quad.s
+
+# target to generate assembly for a file
+quad.cpp.s:
+	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\Exercises\Light\CMakeFiles\Light.dir\build.make src/Exercises/Light/CMakeFiles/Light.dir/quad.cpp.s
+.PHONY : quad.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -284,15 +284,15 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... Light
-	@echo ... Pyramid.obj
-	@echo ... Pyramid.i
-	@echo ... Pyramid.s
 	@echo ... app.obj
 	@echo ... app.i
 	@echo ... app.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... quad.obj
+	@echo ... quad.i
+	@echo ... quad.s
 .PHONY : help
 
 

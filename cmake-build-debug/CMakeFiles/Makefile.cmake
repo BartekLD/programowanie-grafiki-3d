@@ -63,11 +63,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../src/Exercises/CameraMovement/CMakeLists.txt"
   "../src/Exercises/Colors/CMakeLists.txt"
   "../src/Exercises/Indices/CMakeLists.txt"
+  "../src/Exercises/Light/CMakeLists.txt"
   "../src/Exercises/PVM/CMakeLists.txt"
-  "../src/Exercises/PhongLight/CMakeLists.txt"
   "../src/Exercises/Piramida/CMakeLists.txt"
   "../src/Exercises/Textura/CMakeLists.txt"
-  "../src/Exercises/Texture/CMakeLists.txt"
   "../src/Exercises/Triangle/CMakeLists.txt"
   "../src/Exercises/Uniforms/CMakeLists.txt"
   "../src/Exercises/WindowChange/CMakeLists.txt"
@@ -96,10 +95,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/Exercises/WindowChange/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Exercises/Zoom/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Exercises/CameraMovement/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/Exercises/Texture/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/Exercises/PhongLight/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Exercises/Animation/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Exercises/Textura/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Exercises/Light/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -118,8 +116,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/Exercises/WindowChange/CMakeFiles/WindowChange.dir/DependInfo.cmake"
   "src/Exercises/Zoom/CMakeFiles/Zoom.dir/DependInfo.cmake"
   "src/Exercises/CameraMovement/CMakeFiles/CameraMovement.dir/DependInfo.cmake"
-  "src/Exercises/Texture/CMakeFiles/Texture.dir/DependInfo.cmake"
-  "src/Exercises/PhongLight/CMakeFiles/PhongLight.dir/DependInfo.cmake"
   "src/Exercises/Animation/CMakeFiles/Animation.dir/DependInfo.cmake"
   "src/Exercises/Textura/CMakeFiles/Textura.dir/DependInfo.cmake"
+  "src/Exercises/Light/CMakeFiles/Light.dir/DependInfo.cmake"
   )

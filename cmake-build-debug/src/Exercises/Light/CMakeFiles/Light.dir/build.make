@@ -104,25 +104,25 @@ src/Exercises/Light/CMakeFiles/Light.dir/app.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Light.dir/app.cpp.s"
 	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\src\Exercises\Light && A:\Programy\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\src\Exercises\Light\app.cpp -o CMakeFiles\Light.dir\app.cpp.s
 
-src/Exercises/Light/CMakeFiles/Light.dir/Pyramid.cpp.obj: src/Exercises/Light/CMakeFiles/Light.dir/flags.make
-src/Exercises/Light/CMakeFiles/Light.dir/Pyramid.cpp.obj: src/Exercises/Light/CMakeFiles/Light.dir/includes_CXX.rsp
-src/Exercises/Light/CMakeFiles/Light.dir/Pyramid.cpp.obj: ../src/Exercises/Light/Pyramid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Exercises/Light/CMakeFiles/Light.dir/Pyramid.cpp.obj"
-	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\src\Exercises\Light && A:\Programy\MinGW\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Light.dir\Pyramid.cpp.obj -c C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\src\Exercises\Light\Pyramid.cpp
+src/Exercises/Light/CMakeFiles/Light.dir/quad.cpp.obj: src/Exercises/Light/CMakeFiles/Light.dir/flags.make
+src/Exercises/Light/CMakeFiles/Light.dir/quad.cpp.obj: src/Exercises/Light/CMakeFiles/Light.dir/includes_CXX.rsp
+src/Exercises/Light/CMakeFiles/Light.dir/quad.cpp.obj: ../src/Exercises/Light/quad.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Exercises/Light/CMakeFiles/Light.dir/quad.cpp.obj"
+	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\src\Exercises\Light && A:\Programy\MinGW\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Light.dir\quad.cpp.obj -c C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\src\Exercises\Light\quad.cpp
 
-src/Exercises/Light/CMakeFiles/Light.dir/Pyramid.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Light.dir/Pyramid.cpp.i"
-	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\src\Exercises\Light && A:\Programy\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\src\Exercises\Light\Pyramid.cpp > CMakeFiles\Light.dir\Pyramid.cpp.i
+src/Exercises/Light/CMakeFiles/Light.dir/quad.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Light.dir/quad.cpp.i"
+	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\src\Exercises\Light && A:\Programy\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\src\Exercises\Light\quad.cpp > CMakeFiles\Light.dir\quad.cpp.i
 
-src/Exercises/Light/CMakeFiles/Light.dir/Pyramid.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Light.dir/Pyramid.cpp.s"
-	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\src\Exercises\Light && A:\Programy\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\src\Exercises\Light\Pyramid.cpp -o CMakeFiles\Light.dir\Pyramid.cpp.s
+src/Exercises/Light/CMakeFiles/Light.dir/quad.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Light.dir/quad.cpp.s"
+	cd /d C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\cmake-build-debug\src\Exercises\Light && A:\Programy\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\domow\Documents\GitHub\programowanie-grafiki-3d\src\Exercises\Light\quad.cpp -o CMakeFiles\Light.dir\quad.cpp.s
 
 # Object files for target Light
 Light_OBJECTS = \
 "CMakeFiles/Light.dir/main.cpp.obj" \
 "CMakeFiles/Light.dir/app.cpp.obj" \
-"CMakeFiles/Light.dir/Pyramid.cpp.obj"
+"CMakeFiles/Light.dir/quad.cpp.obj"
 
 # External object files for target Light
 Light_EXTERNAL_OBJECTS = \
@@ -130,7 +130,7 @@ Light_EXTERNAL_OBJECTS = \
 
 src/Exercises/Light/Light.exe: src/Exercises/Light/CMakeFiles/Light.dir/main.cpp.obj
 src/Exercises/Light/Light.exe: src/Exercises/Light/CMakeFiles/Light.dir/app.cpp.obj
-src/Exercises/Light/Light.exe: src/Exercises/Light/CMakeFiles/Light.dir/Pyramid.cpp.obj
+src/Exercises/Light/Light.exe: src/Exercises/Light/CMakeFiles/Light.dir/quad.cpp.obj
 src/Exercises/Light/Light.exe: CMakeFiles/glad.dir/src/3rdParty/src/glad/glad.c.obj
 src/Exercises/Light/Light.exe: src/Exercises/Light/CMakeFiles/Light.dir/build.make
 src/Exercises/Light/Light.exe: src/3rdParty/src/glfw3/src/libglfw3.a

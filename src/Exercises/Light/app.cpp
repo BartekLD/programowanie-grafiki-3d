@@ -13,14 +13,13 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 
-
 #include "Application/utils.h"
-
 
 void SimpleShapeApplication::init() {
 
     this->set_camera(new Camera);
     this->set_controler(new CameraControler(camera()));
+
 
 
     auto program = xe::create_program(std::string(PROJECT_DIR) + "/shaders/base_vs.glsl",
@@ -32,7 +31,8 @@ void SimpleShapeApplication::init() {
         std::cerr << std::string(PROJECT_DIR) + "/shaders/base_fs.glsl" << " shader files" << std::endl;
     }
 
-   auto u_transformations_index = glGetUniformBlockIndex(program,"Transformations");
+
+    auto u_transformations_index = glGetUniformBlockIndex(program,"Transformations");
     if(u_transformations_index == GL_INVALID_INDEX)
     { std::cout<<"Cannot find Transformations uniform block in program"<<std::endl; }
     else  { glUniformBlockBinding(program,u_transformations_index,1); }
@@ -48,12 +48,36 @@ void SimpleShapeApplication::init() {
 
     std::tie(w, h) = frame_buffer_size();
     camera()->perspective(glm::half_pi<float>(),(float)w/h,0.1f,100.0f);
-    camera()->look_at(glm::vec3{1.5, 1.0, 4.0},
+    camera()->look_at(glm::vec3{-0.1, 0.0, 15.0},
                       glm::vec3{0.0f, 0.0f, 0.0f},
                       glm::vec3{0.0f,0.0,1.0});
 
 
-    this->quad_ = new Quad_2;
+    glGenBuffers(1,&light_buffer);
+    glBindBuffer(GL_UNIFORM_BUFFER,light_buffer);
+    glBufferData(GL_UNIFORM_BUFFER,4*sizeof(glm::vec4),nullptr,GL_STATIC_DRAW);
+    this->light_.position = camera()->view() * glm::vec4(0.0f,0.0f,0.5f,1.0f);
+    this->light_.color=glm::vec4(1.0f,1.0f,1.0f,1.0f);
+    this->light_.a=glm::vec4 (1.0f, 0.0f, 1.0f, 0.0f);
+    this->light_.ambient=glm::vec4(0.2f,0.2f,0.2f,0.0f);
+    glBufferSubData(GL_UNIFORM_BUFFER,0,4*sizeof(GLfloat),&this->light_.position[0]);
+    glBufferSubData(GL_UNIFORM_BUFFER,4*sizeof(GLfloat),4*sizeof(GLfloat),&this->light_.color[0]);
+    glBufferSubData(GL_UNIFORM_BUFFER,2*4*sizeof(GLfloat),4*sizeof(GLfloat),&this->light_.a[0]);
+    glBufferSubData(GL_UNIFORM_BUFFER,3*4*sizeof(GLfloat),4*sizeof(GLfloat),&this->light_.ambient[0]);
+    glBindBuffer(GL_UNIFORM_BUFFER,0);
+    glBindBufferBase(GL_UNIFORM_BUFFER,2,light_buffer);
+
+    this->quad_ = std::make_shared<Quad>();
+
+
+    /*glEnable(GL_DEPTH_TEST);*/
+    /*glEnable(GL_CULL_FACE);
+    glFrontFace(GL_CCW);
+    glCullFace(GL_BACK);*/
+
+
+
+    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 
     GLuint ubo_handle(0u);
     glGenBuffers(1,&ubo_handle);
@@ -70,28 +94,11 @@ void SimpleShapeApplication::init() {
     glBindBufferBase(GL_UNIFORM_BUFFER,0,ubo_handle);
     glBindBufferBase(GL_UNIFORM_BUFFER,1,u_pvm_buffer_);
 
-    glGenBuffers(1,&u_light_buffer_);
-    glBindBuffer(GL_UNIFORM_BUFFER,u_light_buffer_);
-    glBufferData(GL_UNIFORM_BUFFER,4*sizeof(glm::vec4),nullptr,GL_STATIC_DRAW);
-    this->light_.a=glm::vec4 (1.0f, 1.0f, 0.0f, 0.0f);
-    this->light_.color=glm::vec4(1.0f,1.0f,1.0f,1.0f);
-    this->light_.position = camera()->view() * glm::vec4(0.0f,0.0f,1.0f,1.0f);
-    this->light_.ambient=glm::vec4(0.2f,0.2f,0.2f,0.0f);
-    glBufferSubData(GL_UNIFORM_BUFFER,0,4*sizeof(GLfloat),&this->light_.position[0]);
-    glBufferSubData(GL_UNIFORM_BUFFER,4*sizeof(GLfloat),4*sizeof(GLfloat),&this->light_.color[0]);
-    glBufferSubData(GL_UNIFORM_BUFFER,2*4*sizeof(GLfloat),4*sizeof(GLfloat),&this->light_.a[0]);
-    glBufferSubData(GL_UNIFORM_BUFFER,3*4*sizeof(GLfloat),4*sizeof(GLfloat),&this->light_.ambient[0]);
-    glBindBuffer(GL_UNIFORM_BUFFER,0);
 
-    glBindBufferBase(GL_UNIFORM_BUFFER,2,u_light_buffer_);
-
-    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
     glViewport(0, 0, w, h);
 
-    /*glEnable(GL_CULL_FACE);
-    glFrontFace(GL_CCW);
-    glCullFace(GL_BACK);*/
     glEnable(GL_DEPTH_TEST);
+
     glUseProgram(program);
     auto  u_diffuse_map_location = glGetUniformLocation(program,"diffuse_map");
     if(u_diffuse_map_location==-1) {
@@ -104,27 +111,28 @@ void SimpleShapeApplication::init() {
 
 void SimpleShapeApplication::frame() {
 
-    auto VM = camera()->view();
-    auto P = camera()->projection();
+        auto VM = camera()->view();
+        auto P = camera()->projection();
     auto R = glm::mat3(VM);
     auto N = glm::transpose(glm::inverse(R));
-
-    glBindBuffer(GL_UNIFORM_BUFFER,u_pvm_buffer_);
-    glBufferSubData(GL_UNIFORM_BUFFER,0,sizeof(glm::mat4),&P[0]);
-    glBufferSubData(GL_UNIFORM_BUFFER,sizeof(glm::mat4),sizeof(glm::mat4),&VM[0]);
+        glBindBuffer(GL_UNIFORM_BUFFER, u_pvm_buffer_);
+        glBufferSubData(GL_UNIFORM_BUFFER, 0, sizeof(glm::mat4), &P[0]);
+        glBufferSubData(GL_UNIFORM_BUFFER, sizeof(glm::mat4), sizeof(glm::mat4), &VM[0]);
     glBufferSubData(GL_UNIFORM_BUFFER,2*sizeof(glm::mat4),sizeof(glm::vec4),&N[0]);
     glBufferSubData(GL_UNIFORM_BUFFER,2*sizeof(glm::mat4) + sizeof(glm::vec4),sizeof(glm::vec4),&N[1]);
     glBufferSubData(GL_UNIFORM_BUFFER,2*sizeof(glm::mat4) + 2*sizeof(glm::vec4),sizeof(glm::vec4),&N[2]);
-    glBindBuffer(GL_UNIFORM_BUFFER,u_light_buffer_);
+    glBindBuffer(GL_UNIFORM_BUFFER,light_buffer);
     auto light_position_in_vs = this->light_.position=VM*glm::vec4(0.0f,0.0f,1.0f,1.0f);
     glBufferSubData(GL_UNIFORM_BUFFER,0,sizeof(glm::vec4),&light_position_in_vs[0]);
     this->light_.color=glm::vec4(1.0f,1.0f,1.0f,1.0f);
     glBufferSubData(GL_UNIFORM_BUFFER,4*sizeof(GLfloat),4*sizeof(GLfloat),&this->light_.color[0]);
     glBufferSubData(GL_UNIFORM_BUFFER,8*sizeof(GLfloat),4*sizeof(GLfloat),&this->light_.a[0]);
     glBufferSubData(GL_UNIFORM_BUFFER,12*sizeof(GLfloat),4*sizeof(GLfloat),&this->light_.ambient[0]);
-    glBindBuffer(GL_UNIFORM_BUFFER,0);
-    this->quad_->draw();
+        glBindBuffer(GL_UNIFORM_BUFFER, 0);
+        this->quad_->draw();
+
 }
+
 void SimpleShapeApplication::framebuffer_resize_callback(int w, int h) {
     Application::framebuffer_resize_callback(w, h);
     glViewport(0,0,w,h);
@@ -155,7 +163,6 @@ void SimpleShapeApplication::cursor_position_callback(double x, double y) {
     }
 
 }
-void SimpleShapeApplication::cleanup() {
-    delete quad_;
-}
+
+
 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Light.dir/Pyramid.cpp.obj"
   "CMakeFiles/Light.dir/app.cpp.obj"
   "CMakeFiles/Light.dir/main.cpp.obj"
+  "CMakeFiles/Light.dir/quad.cpp.obj"
   "Light.exe"
   "Light.exe.manifest"
   "Light.pdb"

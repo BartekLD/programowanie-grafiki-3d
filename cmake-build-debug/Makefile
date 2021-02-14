@@ -358,32 +358,6 @@ CameraMovement/fast:
 .PHONY : CameraMovement/fast
 
 #=============================================================================
-# Target rules for targets named Texture
-
-# Build rule for target.
-Texture: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Texture
-.PHONY : Texture
-
-# fast build rule for target.
-Texture/fast:
-	$(MAKE) $(MAKESILENT) -f src\Exercises\Texture\CMakeFiles\Texture.dir\build.make src/Exercises/Texture/CMakeFiles/Texture.dir/build
-.PHONY : Texture/fast
-
-#=============================================================================
-# Target rules for targets named PhongLight
-
-# Build rule for target.
-PhongLight: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 PhongLight
-.PHONY : PhongLight
-
-# fast build rule for target.
-PhongLight/fast:
-	$(MAKE) $(MAKESILENT) -f src\Exercises\PhongLight\CMakeFiles\PhongLight.dir\build.make src/Exercises/PhongLight/CMakeFiles/PhongLight.dir/build
-.PHONY : PhongLight/fast
-
-#=============================================================================
 # Target rules for targets named Animation
 
 # Build rule for target.
@@ -408,6 +382,19 @@ Textura: cmake_check_build_system
 Textura/fast:
 	$(MAKE) $(MAKESILENT) -f src\Exercises\Textura\CMakeFiles\Textura.dir\build.make src/Exercises/Textura/CMakeFiles/Textura.dir/build
 .PHONY : Textura/fast
+
+#=============================================================================
+# Target rules for targets named Light
+
+# Build rule for target.
+Light: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Light
+.PHONY : Light
+
+# fast build rule for target.
+Light/fast:
+	$(MAKE) $(MAKESILENT) -f src\Exercises\Light\CMakeFiles\Light.dir\build.make src/Exercises/Light/CMakeFiles/Light.dir/build
+.PHONY : Light/fast
 
 src/3rdParty/src/glad/glad.obj: src/3rdParty/src/glad/glad.c.obj
 
@@ -454,11 +441,10 @@ help:
 	@echo ... CameraMovement
 	@echo ... Colors
 	@echo ... Indices
+	@echo ... Light
 	@echo ... PVM
-	@echo ... PhongLight
 	@echo ... Piramida
 	@echo ... Textura
-	@echo ... Texture
 	@echo ... Triangle
 	@echo ... Uniforms
 	@echo ... WindowChange
