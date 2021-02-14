@@ -38,6 +38,7 @@ Pyramid::Pyramid() {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,idx_buffer_handle);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER,indices.size() * sizeof(GLushort),indices.data(),
                  GL_STATIC_DRAW);
+
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,0);
     glGenVertexArrays(1, &vao_);
     glBindVertexArray(vao_);

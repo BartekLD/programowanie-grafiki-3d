@@ -396,6 +396,19 @@ PhongLight/fast:
 	$(MAKE) $(MAKESILENT) -f src\Exercises\PhongLight\CMakeFiles\PhongLight.dir\build.make src/Exercises/PhongLight/CMakeFiles/PhongLight.dir/build
 .PHONY : PhongLight/fast
 
+#=============================================================================
+# Target rules for targets named Animation
+
+# Build rule for target.
+Animation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Animation
+.PHONY : Animation
+
+# fast build rule for target.
+Animation/fast:
+	$(MAKE) $(MAKESILENT) -f src\Exercises\Animation\CMakeFiles\Animation.dir\build.make src/Exercises/Animation/CMakeFiles/Animation.dir/build
+.PHONY : Animation/fast
+
 src/3rdParty/src/glad/glad.obj: src/3rdParty/src/glad/glad.c.obj
 
 .PHONY : src/3rdParty/src/glad/glad.obj
@@ -436,6 +449,7 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... uninstall
+	@echo ... Animation
 	@echo ... BackfaceCulling
 	@echo ... CameraMovement
 	@echo ... Colors

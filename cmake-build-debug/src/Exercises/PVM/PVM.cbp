@@ -5,7 +5,7 @@
 		<Option title="PVM"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\3rdParty\;CMake Files\src\3rdParty\src\;CMake Files\src\3rdParty\src\glfw3\;CMake Files\src\3rdParty\src\glfw3\CMake\;CMake Files\src\3rdParty\src\glfw3\src\;CMake Files\src\Application\;CMake Files\src\Exercises\;CMake Files\src\Exercises\Triangle\;CMake Files\src\Exercises\Colors\;CMake Files\src\Exercises\Indices\;CMake Files\src\Exercises\Uniforms\;CMake Files\src\Exercises\PVM\;CMake Files\src\Exercises\Piramida\;CMake Files\src\Exercises\BackfaceCulling\;CMake Files\src\Exercises\WindowChange\;CMake Files\src\Exercises\Zoom\;CMake Files\src\Exercises\CameraMovement\;CMake Files\src\Exercises\PyramidsAnimation\;CMake Files\src\Exercises\Texture\;CMake Files\src\Exercises\PhongLight\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\3rdParty\;CMake Files\src\3rdParty\src\;CMake Files\src\3rdParty\src\glfw3\;CMake Files\src\3rdParty\src\glfw3\CMake\;CMake Files\src\3rdParty\src\glfw3\src\;CMake Files\src\Application\;CMake Files\src\Exercises\;CMake Files\src\Exercises\Triangle\;CMake Files\src\Exercises\Colors\;CMake Files\src\Exercises\Indices\;CMake Files\src\Exercises\Uniforms\;CMake Files\src\Exercises\PVM\;CMake Files\src\Exercises\Piramida\;CMake Files\src\Exercises\BackfaceCulling\;CMake Files\src\Exercises\WindowChange\;CMake Files\src\Exercises\Zoom\;CMake Files\src\Exercises\CameraMovement\;CMake Files\src\Exercises\PyramidsAnimation\;CMake Files\src\Exercises\Texture\;CMake Files\src\Exercises\PhongLight\;CMake Files\src\Exercises\Animation\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/cmake-build-debug/src/Exercises/PVM"/>
@@ -144,6 +144,9 @@
 		</Unit>
 		<Unit filename="C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/PhongLight/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\Exercises\PhongLight\"/>
+		</Unit>
+		<Unit filename="C:/Users/domow/Documents/GitHub/programowanie-grafiki-3d/src/Exercises/Animation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Exercises\Animation\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

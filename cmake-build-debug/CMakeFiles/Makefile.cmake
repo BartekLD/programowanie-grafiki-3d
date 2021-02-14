@@ -47,10 +47,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "A:/Programy/CLion 2020.2.4/bin/cmake/win/share/cmake-3.17/Modules/ProcessorCount.cmake"
   "A:/Programy/CLion 2020.2.4/bin/cmake/win/share/cmake-3.17/Modules/WriteBasicConfigVersionFile.cmake"
   "../CMakeLists.txt"
-  "CMakeFiles/3.17.3/CMakeCCompiler.cmake"
-  "CMakeFiles/3.17.3/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.17.3/CMakeRCCompiler.cmake"
-  "CMakeFiles/3.17.3/CMakeSystem.cmake"
+  "CMakeFiles/3.17.5/CMakeCCompiler.cmake"
+  "CMakeFiles/3.17.5/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.17.5/CMakeRCCompiler.cmake"
+  "CMakeFiles/3.17.5/CMakeSystem.cmake"
   "../src/3rdParty/src/glfw3/CMake/cmake_uninstall.cmake.in"
   "../src/3rdParty/src/glfw3/CMake/glfw3.pc.in"
   "../src/3rdParty/src/glfw3/CMake/glfw3Config.cmake.in"
@@ -58,6 +58,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../src/3rdParty/src/glfw3/src/CMakeLists.txt"
   "../src/3rdParty/src/glfw3/src/glfw_config.h.in"
   "../src/Application/CMakeLists.txt"
+  "../src/Exercises/Animation/CMakeLists.txt"
   "../src/Exercises/BackfaceCulling/CMakeLists.txt"
   "../src/Exercises/CameraMovement/CMakeLists.txt"
   "../src/Exercises/Colors/CMakeLists.txt"
@@ -98,6 +99,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/Exercises/PyramidsAnimation/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Exercises/Texture/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Exercises/PhongLight/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Exercises/Animation/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -119,4 +121,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/Exercises/PyramidsAnimation/CMakeFiles/PyramidsAnimation.dir/DependInfo.cmake"
   "src/Exercises/Texture/CMakeFiles/Texture.dir/DependInfo.cmake"
   "src/Exercises/PhongLight/CMakeFiles/PhongLight.dir/DependInfo.cmake"
+  "src/Exercises/Animation/CMakeFiles/Animation.dir/DependInfo.cmake"
   )
