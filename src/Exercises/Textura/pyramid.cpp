@@ -32,7 +32,7 @@ Pyramid::Pyramid() {
 
 
 
-    GLuint v_buffer_handle;
+
     glGenBuffers(1, &v_buffer_handle);
     glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle);
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(GLfloat), vertices.data(), GL_STATIC_DRAW);
@@ -62,7 +62,7 @@ Pyramid::Pyramid() {
     glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);
     glBindTexture(GL_TEXTURE_2D,0);
 
-    GLuint idx_buffer_handle;
+
     glGenBuffers(1,&idx_buffer_handle);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idx_buffer_handle);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), indices.data(), GL_STATIC_DRAW);

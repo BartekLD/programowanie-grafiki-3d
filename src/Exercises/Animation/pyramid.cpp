@@ -25,7 +25,7 @@ Pyramid::Pyramid() {
             1.0f, -1.0f, 0.0, 0.81, 0.0, 0.5, //fourth wall
     };
 
-    GLuint v_buffer_handle;
+    /*GLuint v_buffer_handle;*/
     glGenBuffers(1, &v_buffer_handle);
     glBindBuffer(GL_ARRAY_BUFFER, v_buffer_handle);
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(GLfloat), vertices.data(), GL_STATIC_DRAW);
@@ -34,7 +34,7 @@ Pyramid::Pyramid() {
     std::vector<GLushort> indices = {
             0,2,1,3,1,2,4,5,6,9,8,7,10,11,12,13,15,14 };
 
-    GLuint idx_buffer_handle;
+    /*GLuint idx_buffer_handle;*/
     glGenBuffers(1,&idx_buffer_handle);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idx_buffer_handle);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), indices.data(), GL_STATIC_DRAW);
